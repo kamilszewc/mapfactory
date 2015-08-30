@@ -28,7 +28,8 @@ namespace MapFactory
 
             try
             {
-                StorageFile storageFile = await storageFolder.GetFileAsync("tracking.dat");
+                StorageFile storageFileTracking = await storageFolder.GetFileAsync("tracking.dat");
+                StorageFile storageFileObjects = await storageFolder.GetFileAsync("objects.dat");
                 this.textBlockStatus.Text = "database is filled with data";
             }
             catch (System.IO.FileNotFoundException)
@@ -51,26 +52,41 @@ namespace MapFactory
             {
                 var file = await storageFolder.OpenStreamForReadAsync("tracking.dat");
 
+                emailComposeTask.Body += "Trails:\r\n";
                 using (StreamReader streamReader = new StreamReader(file))
                 {
                     emailComposeTask.Body += streamReader.ReadToEnd();
                 }
 
-            //    StorageFile storageFile = await storageFolder.GetFileAsync("tracking.dat");
-            //    var stream = Windows.Storage.Streams.RandomAccessStreamReference.CreateFromFile(storageFile);
-            //    EmailAttachment emailAttachment = new EmailAttachment("tracking.dat", stream);
-            //    emailMessage.Attachments.Add(emailAttachment);
-            //    await EmailManager.ShowComposeNewEmailAsync(emailMessage);
+                
+            }
+            catch (System.IO.FileNotFoundException)
+            {
+                this.textBlockStatus.Text = "cannot send empty tracking database";
+            }
+
+            emailComposeTask.Body += "\r\n";
+
+            try
+            {
+                var file = await storageFolder.OpenStreamForReadAsync("objects.dat");
+
+                emailComposeTask.Body += "Objects:\r\n";
+                using (StreamReader streamReader = new StreamReader(file))
+                {
+                    emailComposeTask.Body += streamReader.ReadToEnd();
+                }
 
                 await ClearData();
             }
             catch (System.IO.FileNotFoundException)
             {
-                this.textBlockStatus.Text = "cannot send empty file";
+                this.textBlockStatus.Text = "cannot send empty objects database";
             }
-            
+
             emailComposeTask.Show();
 
+            await ClearData();
         }
 
         async private void buttonClearData_Click(object sender, RoutedEventArgs e)
@@ -81,8 +97,12 @@ namespace MapFactory
         async private Task ClearData()
         {
             StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-            StorageFile storageFile = await storageFolder.CreateFileAsync("tracking.dat", CreationCollisionOption.OpenIfExists);
-            await storageFile.DeleteAsync();
+
+            StorageFile storageFileTracking = await storageFolder.CreateFileAsync("tracking.dat", CreationCollisionOption.OpenIfExists);
+            await storageFileTracking.DeleteAsync();
+
+            StorageFile storageFileObjects = await storageFolder.CreateFileAsync("objects.dat", CreationCollisionOption.OpenIfExists);
+            await storageFileObjects.DeleteAsync();
 
             this.textBlockStatus.Text = "database is empty";
         }

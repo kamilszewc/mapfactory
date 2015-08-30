@@ -20,9 +20,9 @@ namespace MapFactory
         private Geoposition _geoposition;
         private PositionStatus _positionStatus;
 
-        private double _longitude;
-        private double _latitude;
-        private double _altitude;
+        public static double _longitude;
+        public static double _latitude;
+        public static double _altitude;
 
         private bool _isTrackingStarted = false;
 

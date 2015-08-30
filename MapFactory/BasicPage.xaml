@@ -1,0 +1,41 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:maps="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
+    x:Class="MapFactory.BasicPage"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--<Grid x:Name="LayoutRoot" Background="Transparent">
+        <StackPanel HorizontalAlignment="Left" Height="100" Margin="401,125,-21,0" VerticalAlignment="Top" Width="100"/>
+
+        <maps:Map HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="460" Height="240"/>
+
+    </Grid>-->
+
+    <Grid>
+        <!--<Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/tlo_puste.png"/>
+        </Grid.Background>-->
+        <StackPanel HorizontalAlignment="Left" Height="748" Margin="10,10,0,0" VerticalAlignment="Top" Width="460">
+            <!--<maps:Map Height="100"/>
+            <Maps:MapControl x:Name="map" Height="240" Margin="10"/>-->
+            <TextBlock x:Name="textBlockLongitude" TextWrapping="Wrap" Text="Longitude: ---" Margin="10,5" FontSize="18.667" Foreground="#FF784418"/>
+            <TextBlock x:Name="textBlockLatitude" TextWrapping="Wrap" Text="Latitude: ---" FontSize="18.667" Margin="10,0,10,5" Foreground="#FF663A14"/>
+            <TextBlock x:Name="textBlockAltitude" TextWrapping="Wrap" Text="Altitude: ---" FontSize="18.667" Margin="10,0,10,5" Foreground="#FF663A14"/>
+            <Button x:Name="buttonStartStopTracking" Content="Start tracking" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,5" Click="buttonStartStopTracking_Click" IsEnabled="False" Foreground="#FF663A14" BorderBrush="#FF341707"/>
+            <Button x:Name="buttonAddObject" Content="Add object" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,5" Click="buttonAddObject_Click" IsEnabled="False" Foreground="#FF663A14" BorderBrush="#FF341707"/>
+            <Button x:Name="buttonManageData" Content="Manage data" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,5" Click="buttonManageData_Click" IsEnabled="True" Foreground="#FF663A14" BorderBrush="#FF341707"/>
+
+        </StackPanel>
+        <TextBlock x:Name="textBlockStateInfo" HorizontalAlignment="Left" Margin="28,573,0,0" TextWrapping="Wrap" Text="Status: running" VerticalAlignment="Top" FontSize="18.667" Foreground="White"/>
+    </Grid>
+</phone:PhoneApplicationPage>

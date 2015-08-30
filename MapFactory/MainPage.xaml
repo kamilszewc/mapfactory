@@ -15,10 +15,16 @@
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="/Assets/tlo.png"/>
+        </Grid.Background>
         <!--<Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/tlo.png"/>
         </Grid.Background>-->
-        <Button x:Name="button" Content="Next" HorizontalAlignment="Left" Margin="236,569,0,0" VerticalAlignment="Top" Width="152" Click="button_Click" Height="110" BorderBrush="{x:Null}">
+        <Button x:Name="button" Content="Next" HorizontalAlignment="Left" Margin="266,575,0,0" VerticalAlignment="Top" Width="163" Click="button_Click" Height="116" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/Assets/guzik.png"/>
+            </Button.Background>
             <!--<Button.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="Assets/guzik.png"/>
             </Button.Background>-->

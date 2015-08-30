@@ -31,6 +31,7 @@
             </StackPanel.Background>
             <!--<maps:Map Height="100"/>
             <Maps:MapControl x:Name="map" Height="240" Margin="10"/>-->
+            <maps:Map x:Name="map" Height="331" Margin="10"/>
             <TextBlock x:Name="textBlockLongitude" TextWrapping="Wrap" Text="Longitude: ---" Margin="10,5" FontSize="18.667" Foreground="#FF784418"/>
             <TextBlock x:Name="textBlockLatitude" TextWrapping="Wrap" Text="Latitude: ---" FontSize="18.667" Margin="10,0,10,5" Foreground="#FF663A14"/>
             <TextBlock x:Name="textBlockAltitude" TextWrapping="Wrap" Text="Altitude: ---" FontSize="18.667" Margin="10,0,10,5" Foreground="#FF663A14"/>
@@ -39,6 +40,6 @@
             <Button x:Name="buttonManageData" Content="Manage data" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,5" Click="buttonManageData_Click" IsEnabled="True" Foreground="#FF663A14" BorderBrush="#FF341707"/>
 
         </StackPanel>
-        <TextBlock x:Name="textBlockStateInfo" Margin="173,722,183,0" TextWrapping="Wrap" Text="Status: running" VerticalAlignment="Top" FontSize="18.667" Foreground="#FF573110" d:LayoutOverrides="Width, LeftPosition, RightPosition"/>
+        <TextBlock x:Name="textBlockStateInfo" Margin="151,722,140,0" TextWrapping="Wrap" Text="Status: running" VerticalAlignment="Top" FontSize="18.667" Foreground="#FF573110"/>
     </Grid>
 </phone:PhoneApplicationPage>

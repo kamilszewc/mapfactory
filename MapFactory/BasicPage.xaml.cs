@@ -12,6 +12,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Windows.Storage;
 using System.IO;
+using Microsoft.Phone.Maps.Controls;
+using System.Device.Location;
+using System.Windows.Shapes;
+using System.Windows.Media;
 
 namespace MapFactory
 {
@@ -130,12 +134,28 @@ namespace MapFactory
             this.textBlockLatitude.Text = "Latitude: " + _latitude.ToString();
             this.textBlockAltitude.Text = "Altitude: " + _altitude.ToString();
 
+            this.map.Center = new GeoCoordinate(_latitude, _longitude);
+            this.map.ZoomLevel = 13;
+            this.map.LandmarksEnabled = true;
+            this.map.PedestrianFeaturesEnabled = true;
+
             //_mapIconPosition.Location = geoposition.Coordinate.Point;
 
-            //this.map.Center = geoposition.Coordinate.Point;
-            //this.map.ZoomLevel = 15;
-            //this.map.LandmarksVisible = true;
-            //this.map.PedestrianFeaturesVisible = true;
+            System.Windows.Shapes.Ellipse myCircle = new Ellipse();
+            myCircle.Fill = new System.Windows.Media.SolidColorBrush(Colors.Blue);
+            myCircle.Height = 15;
+            myCircle.Width = 15;
+            myCircle.Opacity = 25;
+
+            MapOverlay myLocationOverlay = new MapOverlay();
+            myLocationOverlay.Content = myCircle;
+            myLocationOverlay.PositionOrigin = new Point(0.5, 0.5);
+            myLocationOverlay.GeoCoordinate = new GeoCoordinate(_latitude, _longitude);
+
+            MapLayer myLocationLayer = new MapLayer();
+            myLocationLayer.Add(myLocationOverlay);
+
+            this.map.Layers.Add(myLocationLayer);
 
             if (this._isTrackingStarted == true)
             {

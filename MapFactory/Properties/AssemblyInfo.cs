@@ -9,7 +9,7 @@ using System.Resources;
 [assembly: AssemblyTitle("MapFactory")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("In-silico laboratory")]
 [assembly: AssemblyProduct("MapFactory")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]

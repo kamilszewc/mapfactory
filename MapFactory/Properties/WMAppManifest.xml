@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{adfa6b37-f35a-4c0b-8b03-71b4f7ffd9b4}" Title="MapFactory" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="MapFactory author" Description="Sample description" Publisher="MapFactory" PublisherID="{34d24d8c-43f4-4f7b-8064-e4629e8609e2}">
+  <App xmlns="" ProductID="{adfa6b37-f35a-4c0b-8b03-71b4f7ffd9b4}" Title="MapFactory" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Kamil Szewc, Kasia Walczewska-Szewc" Description="Sample description" Publisher="In-silico laboratory" PublisherID="{34d24d8c-43f4-4f7b-8064-e4629e8609e2}">
     <IconPath IsRelative="true" IsResource="false">Assets\StoreLogo.scale-240.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
-      <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
       <Capability Name="ID_CAP_SENSORS" />
       <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
       <Capability Name="ID_CAP_LOCATION" />
+      <Capability Name="ID_CAP_MAP" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml">

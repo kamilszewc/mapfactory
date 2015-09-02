@@ -21,11 +21,34 @@
         <!--<Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/tlo_puste.png"/>
         </Grid.Background>-->
-        <StackPanel HorizontalAlignment="Left" Height="644" Margin="10,10,0,0" VerticalAlignment="Top" Width="460">
+        <StackPanel HorizontalAlignment="Left" Height="644" Margin="0,9,0,0" VerticalAlignment="Top" Width="460">
             <TextBlock TextWrapping="Wrap" Text="Name:" FontSize="18.667" Foreground="#FF49260E" Margin="0,10,0,0"/>
             <TextBox x:Name="textBoxName" Margin="5,0,5,10" TextWrapping="Wrap" VerticalAlignment="Stretch"/>
             <TextBlock TextWrapping="Wrap" Text="Icon:" FontSize="18.667" Foreground="#FF49260E" Margin="0,10,0,0"/>
-            <Grid Height="197" Margin="0,0,0,10"/>
+            <Grid Height="197" Margin="0,0,0,10" HorizontalAlignment="Center">
+                <RadioButton x:Name="radioButton" Margin="8,-5,292,0" RenderTransformOrigin="-0.122,-0.044" BorderBrush="#FF875F38" Height="80" VerticalAlignment="Top" Width="160" Background="{x:Null}">
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Assets/domek.png" HorizontalAlignment="Right" VerticalAlignment="Top" Width="50" Height="50" />
+                    </StackPanel>
+                </RadioButton>
+                <RadioButton x:Name="radioButton1"  Margin="8,0,0,14" RenderTransformOrigin="0.594,0.563" HorizontalAlignment="Left" Width="160" BorderBrush="#FF875F38" Height="80" VerticalAlignment="Bottom" d:LayoutOverrides="Height">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Assets/drzewo.png" HorizontalAlignment="Right" VerticalAlignment="Top" Width="50" Height="50" />
+                    </StackPanel>
+                </RadioButton>
+                <RadioButton x:Name="radioButton2"  Height="80" Margin="228,0,72,14" VerticalAlignment="Bottom" Background="{x:Null}" BorderBrush="#FF875F38" d:LayoutOverrides="LeftPosition, RightPosition">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Assets/jaskinia.png" HorizontalAlignment="Right" VerticalAlignment="Top" Width="50" Height="50" />
+                    </StackPanel>
+                </RadioButton>
+
+                <RadioButton x:Name="radioButton3"  Height="80" Margin="228,-4,72,0" VerticalAlignment="Top" BorderBrush="#FF875F38" d:LayoutOverrides="LeftPosition, RightPosition">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Assets/przystan.png" HorizontalAlignment="Right" VerticalAlignment="Top" Width="50" Height="50" />
+                    </StackPanel>
+                </RadioButton>
+            </Grid>
             <TextBlock TextWrapping="Wrap" Text="Description:" Foreground="#FF49260E" FontSize="18.667" Margin="0,10,0,0"/>
             <!--<RichEditBox Margin="0" VerticalAlignment="Stretch" Height="159"/>-->
             <TextBox x:Name="textBoxDescription" Margin="5,0,5,10" TextWrapping="Wrap" VerticalAlignment="Stretch" RenderTransformOrigin="0.5,0.5" Height="242"/>

@@ -21,7 +21,7 @@
         <!--<Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/tlo_puste.png"/>
         </Grid.Background>-->
-        <StackPanel HorizontalAlignment="Left" Height="644" Margin="0,9,0,0" VerticalAlignment="Top" Width="460">
+        <StackPanel Margin="10,93,10,48" Width="460">
             <TextBlock TextWrapping="Wrap" Text="Name:" FontSize="18.667" Foreground="#FF49260E" Margin="0,10,0,0"/>
             <TextBox x:Name="textBoxName" Margin="5,0,5,10" TextWrapping="Wrap" VerticalAlignment="Stretch"/>
             <TextBlock TextWrapping="Wrap" Text="Icon:" FontSize="18.667" Foreground="#FF49260E" Margin="0,10,0,0"/>
@@ -101,9 +101,10 @@
             </Grid>
             <TextBlock TextWrapping="Wrap" Text="Description:" Foreground="#FF49260E" FontSize="18.667" Margin="0,10,0,0"/>
             <!--<RichEditBox Margin="0" VerticalAlignment="Stretch" Height="159"/>-->
-            <TextBox x:Name="textBoxDescription" Margin="5,0,5,10" TextWrapping="Wrap" VerticalAlignment="Stretch" RenderTransformOrigin="0.5,0.5" Height="242"/>
+            <TextBox x:Name="textBoxDescription" Margin="5,0,5,10" TextWrapping="Wrap" VerticalAlignment="Stretch" RenderTransformOrigin="0.5,0.5" Height="202"/>
+            <Button x:Name="button" Content="Add object" HorizontalAlignment="Right"  VerticalAlignment="Top" BorderBrush="#FF49260E" Foreground="#FF49260E" Click="button_Click" Background="Transparent" Margin="5,0"/>
+
         </StackPanel>
-        <Button x:Name="button" Content="Add object" HorizontalAlignment="Left" Margin="269,659,0,0" VerticalAlignment="Top" BorderBrush="#FF49260E" Foreground="#FF49260E" Click="button_Click" Background="Transparent"/>
 
     </Grid>
 

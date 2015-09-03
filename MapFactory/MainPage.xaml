@@ -29,6 +29,7 @@
                 <ImageBrush Stretch="Uniform" ImageSource="Assets/guzik.png"/>
             </Button.Background>-->
         </Button>
+        <TextBlock Margin="0,0,0,20" TextWrapping="Wrap" Text="© In-silico laboratory 2015" VerticalAlignment="Bottom" Foreground="Black" HorizontalAlignment="Center"/>
     </Grid>
 
 </phone:PhoneApplicationPage>

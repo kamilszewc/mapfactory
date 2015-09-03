@@ -22,13 +22,13 @@
     </Grid>-->
 
     <Grid>
-        <!--<Grid.Background>
+        <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/tlo_puste.png"/>
-        </Grid.Background>-->
-        <StackPanel HorizontalAlignment="Left" Height="748" Margin="9,11,0,0" VerticalAlignment="Top" Width="460">
-            <StackPanel.Background>
+        </Grid.Background>
+        <StackPanel HorizontalAlignment="Left" Height="811" VerticalAlignment="Top" Width="480">
+            <!--<StackPanel.Background>
                 <ImageBrush Stretch="Fill" ImageSource="/Assets/tlo_puste.png"/>
-            </StackPanel.Background>
+            </StackPanel.Background>-->
             <!--<maps:Map Height="100"/>
             <Maps:MapControl x:Name="map" Height="240" Margin="10"/>-->
             <maps:Map x:Name="map" Height="331" Margin="10"/>
@@ -40,6 +40,6 @@
             <Button x:Name="buttonManageData" Content="Manage data" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,5" Click="buttonManageData_Click" IsEnabled="True" Foreground="#FF663A14" BorderBrush="#FF341707"/>
 
         </StackPanel>
-        <TextBlock x:Name="textBlockStateInfo" Margin="151,722,140,0" TextWrapping="Wrap" Text="Status: running" VerticalAlignment="Top" FontSize="18.667" Foreground="#FF573110"/>
+        <TextBlock x:Name="textBlockStateInfo" Margin="151,722,140,0" TextWrapping="Wrap" Text="Status: running" VerticalAlignment="Top" FontSize="18.667" Foreground="#FF573110" HorizontalAlignment="Center"/>
     </Grid>
 </phone:PhoneApplicationPage>

@@ -19,7 +19,7 @@
             <ImageBrush Stretch="Fill" ImageSource="/Assets/tlo_puste.png"/>
         </Grid.Background>
         <StackPanel HorizontalAlignment="Left" Height="648" Margin="10,10,0,0" VerticalAlignment="Top" Width="460">
-            <StackPanel Orientation="Horizontal" Height="58" Background="White" Margin="5">
+            <StackPanel Orientation="Horizontal" Height="58" Margin="20,10,83,5" HorizontalAlignment="Left">
                 <TextBlock TextWrapping="Wrap" Text="Status:" Foreground="Black" FontSize="18.667" Margin="5,15,5,5"/>
                 <TextBlock x:Name="textBlockStatus" TextWrapping="Wrap" Text="" Foreground="Black" FontSize="18.667" Margin="5,15,5,5"/>
             </StackPanel>

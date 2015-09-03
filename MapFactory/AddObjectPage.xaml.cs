@@ -22,9 +22,21 @@ namespace MapFactory
 
         async private void button_Click(object sender, RoutedEventArgs e)
         {
-            string objectString = this.textBoxName.Text;
-            objectString += " " + BasicPage._longitude.ToString() + " " + BasicPage._latitude.ToString() + " " + BasicPage._altitude.ToString() + " ";
-            objectString += this.textBoxDescription.Text + "\r\n";
+            string objectString = "Name: " + this.textBoxName.Text + "\r\n";
+            objectString += "Position: " + BasicPage._longitude.ToString() + " " + BasicPage._latitude.ToString() + " " + BasicPage._altitude.ToString() + "\r\n";
+            objectString += "Description: " + this.textBoxDescription.Text + "\r\n";
+            objectString += "Icon: ";
+            if (this.radioButton1.IsChecked == true) objectString += "1";
+            else if (this.radioButton2.IsChecked == true) objectString += "2";
+            else if (this.radioButton3.IsChecked == true) objectString += "3";
+            else if (this.radioButton4.IsChecked == true) objectString += "4";
+            else if (this.radioButton5.IsChecked == true) objectString += "5";
+            else if (this.radioButton6.IsChecked == true) objectString += "6";
+            else if (this.radioButton7.IsChecked == true) objectString += "7";
+            else if (this.radioButton8.IsChecked == true) objectString += "8";
+            else if (this.radioButton9.IsChecked == true) objectString += "9";
+            else objectString += "---";
+            objectString += "\r\n\r\n";
 
             byte[] positionBytes = System.Text.Encoding.UTF8.GetBytes(objectString);
 

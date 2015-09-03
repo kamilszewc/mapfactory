@@ -26,13 +26,29 @@ namespace MapFactory
         {
             StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 
+            bool isFileTracking = false;
+            bool isFileObjects = false;
             try
             {
                 StorageFile storageFileTracking = await storageFolder.GetFileAsync("tracking.dat");
+                isFileTracking = true;
+            }
+            catch
+            {}
+
+            try
+            {
                 StorageFile storageFileObjects = await storageFolder.GetFileAsync("objects.dat");
+                isFileObjects = true;
+            }
+            catch
+            {}
+            
+            if ( (isFileTracking == true) || (isFileObjects == true))
+            {
                 this.textBlockStatus.Text = "database is filled with data";
             }
-            catch (System.IO.FileNotFoundException)
+            else
             {
                 this.textBlockStatus.Text = "database is empty";
             }

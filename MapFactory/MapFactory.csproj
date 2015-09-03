@@ -147,13 +147,19 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\bagno.png" />
     <Content Include="Assets\domek.png" />
     <Content Include="Assets\drzewo.png" />
     <Content Include="Assets\guzik.png" />
     <Content Include="Assets\guzik_najechany.png" />
     <Content Include="Assets\jaskinia.png" />
     <Content Include="Assets\Logo.scale-240.png" />
+    <Content Include="Assets\namiot.png" />
+    <Content Include="Assets\piasek.png" />
+    <Content Include="Assets\polanka.png" />
     <Content Include="Assets\przystan.png" />
+    <Content Include="Assets\restauracja.png" />
+    <Content Include="Assets\skaly.png" />
     <Content Include="Assets\SmallLogo.scale-240.png" />
     <Content Include="Assets\SplashScreen.scale-240.png" />
     <Content Include="Assets\Square71x71Logo.scale-240.png" />
@@ -175,6 +181,7 @@
     </Content>
     <Content Include="Assets\tlo.png" />
     <Content Include="Assets\tlo_puste.png" />
+    <Content Include="Assets\wiata.png" />
     <Content Include="Assets\WideLogo.scale-240.png" />
   </ItemGroup>
   <ItemGroup>

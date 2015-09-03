@@ -25,28 +25,78 @@
             <TextBlock TextWrapping="Wrap" Text="Name:" FontSize="18.667" Foreground="#FF49260E" Margin="0,10,0,0"/>
             <TextBox x:Name="textBoxName" Margin="5,0,5,10" TextWrapping="Wrap" VerticalAlignment="Stretch"/>
             <TextBlock TextWrapping="Wrap" Text="Icon:" FontSize="18.667" Foreground="#FF49260E" Margin="0,10,0,0"/>
-            <Grid Height="197" Margin="0,0,0,10" HorizontalAlignment="Center">
-                <RadioButton x:Name="radioButton" Margin="8,-5,292,0" RenderTransformOrigin="-0.122,-0.044" BorderBrush="#FF875F38" Height="80" VerticalAlignment="Top" Width="160" Background="{x:Null}">
+            <Grid Height="197" Margin="7,0,0,10" HorizontalAlignment="Center" Width="453">
+                <RadioButton x:Name="radioButton2" Margin="167,2,177,0" RenderTransformOrigin="-0.122,-0.044" BorderBrush="#FF32210F" BorderThickness="1" FontSize="13.333" Cursor="Hand" Background="{x:Null}" d:LayoutOverrides="LeftPosition, RightPosition" Height="74" VerticalAlignment="Top">
 
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="Assets/domek.png" HorizontalAlignment="Right" VerticalAlignment="Top" Width="50" Height="50" />
-                    </StackPanel>
-                </RadioButton>
-                <RadioButton x:Name="radioButton1"  Margin="8,0,0,14" RenderTransformOrigin="0.594,0.563" HorizontalAlignment="Left" Width="160" BorderBrush="#FF875F38" Height="80" VerticalAlignment="Bottom" d:LayoutOverrides="Height">
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="Assets/drzewo.png" HorizontalAlignment="Right" VerticalAlignment="Top" Width="50" Height="50" />
-                    </StackPanel>
-                </RadioButton>
-                <RadioButton x:Name="radioButton2"  Height="80" Margin="228,0,72,14" VerticalAlignment="Bottom" Background="{x:Null}" BorderBrush="#FF875F38" d:LayoutOverrides="LeftPosition, RightPosition">
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="Assets/jaskinia.png" HorizontalAlignment="Right" VerticalAlignment="Top" Width="50" Height="50" />
-                    </StackPanel>
-                </RadioButton>
 
-                <RadioButton x:Name="radioButton3"  Height="80" Margin="228,-4,72,0" VerticalAlignment="Top" BorderBrush="#FF875F38" d:LayoutOverrides="LeftPosition, RightPosition">
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="Assets/przystan.png" HorizontalAlignment="Right" VerticalAlignment="Top" Width="50" Height="50" />
-                    </StackPanel>
+                    <Image Source="/Assets/bagno.png" Width="37" Height="29" Stretch="Fill" RenderTransformOrigin="1.216,0.448" />
+
+
+
+                </RadioButton>
+                <RadioButton x:Name="radioButton3" Margin="0,1,6,0" RenderTransformOrigin="-0.122,-0.044" BorderBrush="#FF32210F" BorderThickness="1" FontSize="13.333" HorizontalAlignment="Right" Width="109" Cursor="Hand" Background="{x:Null}" Height="74" VerticalAlignment="Top">
+
+
+                    <Image Source="/Assets/drzewo.png" Width="27" Height="34" Stretch="Fill" RenderTransformOrigin="1.216,0.448" />
+
+
+
+                </RadioButton>
+                <RadioButton x:Name="radioButton1" Margin="4,1,0,0" RenderTransformOrigin="-0.122,-0.044" BorderBrush="#FF32210F" BorderThickness="1" FontSize="13.333" HorizontalAlignment="Left" Width="109" Cursor="Hand" Background="{x:Null}" Height="74" VerticalAlignment="Top">
+
+
+                    <Image Source="/Assets/domek.png" Width="37" Height="29" Stretch="Fill" RenderTransformOrigin="1.216,0.448" />
+
+
+
+                </RadioButton>
+                <RadioButton x:Name="radioButton4" Margin="1,61,0,62" RenderTransformOrigin="-0.122,-0.044" BorderBrush="#FF32210F" BorderThickness="1" FontSize="13.333" HorizontalAlignment="Left" Width="109" Cursor="Hand" Background="{x:Null}" d:LayoutOverrides="TopPosition, BottomPosition">
+
+
+                    <Image Source="/Assets/jaskinia.png" Width="37" Height="29" Stretch="Fill" RenderTransformOrigin="1.216,0.448" />
+
+
+
+                </RadioButton>
+                <RadioButton x:Name="radioButton7" Margin="2,0,0,1" RenderTransformOrigin="-0.122,-0.044" BorderBrush="#FF32210F" BorderThickness="1" FontSize="13.333" HorizontalAlignment="Left" Width="109" Cursor="Hand" Background="{x:Null}" Height="74" VerticalAlignment="Bottom">
+
+
+                    <Image Source="/Assets/polanka.png" Width="37" Height="29" Stretch="Fill" RenderTransformOrigin="1.216,0.448" />
+
+
+
+                </RadioButton>
+                <RadioButton x:Name="radioButton5" Margin="166,63,178,60" RenderTransformOrigin="-0.122,-0.044" BorderBrush="#FF32210F" BorderThickness="1" FontSize="13.333" Cursor="Hand" Background="{x:Null}" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition">
+
+
+                    <Image Source="/Assets/namiot.png" Width="37" Height="29" Stretch="Fill" RenderTransformOrigin="1.216,0.448" />
+
+
+
+                </RadioButton>
+                <RadioButton x:Name="radioButton8" Margin="163,0,181,-2" RenderTransformOrigin="-0.122,-0.044" BorderBrush="#FF32210F" BorderThickness="1" FontSize="13.333" Cursor="Hand" Background="{x:Null}" Height="74" VerticalAlignment="Bottom" d:LayoutOverrides="LeftPosition, RightPosition">
+
+
+                    <Image Source="/Assets/restauracja.png" Width="37" Height="29" Stretch="Fill" RenderTransformOrigin="1.216,0.448" />
+
+
+
+                </RadioButton>
+                <RadioButton x:Name="radioButton6" Margin="0,61,8,62" RenderTransformOrigin="-0.122,-0.044" BorderBrush="#FF32210F" BorderThickness="1" FontSize="13.333" HorizontalAlignment="Right" Width="109" Cursor="Hand" Background="{x:Null}" d:LayoutOverrides="TopPosition, BottomPosition">
+
+
+                    <Image Source="/Assets/piasek.png" Width="37" Height="29" Stretch="Fill" RenderTransformOrigin="1.216,0.448" />
+
+
+
+                </RadioButton>
+                <RadioButton x:Name="radioButton9" Margin="0,0,7,0" RenderTransformOrigin="-0.122,-0.044" BorderBrush="#FF32210F" BorderThickness="1" FontSize="13.333" HorizontalAlignment="Right" Width="109" Cursor="Hand" Background="{x:Null}" Height="74" VerticalAlignment="Bottom">
+
+
+                    <Image Source="/Assets/skaly.png" Width="37" Height="29" Stretch="Fill" RenderTransformOrigin="1.216,0.448" />
+
+
+
                 </RadioButton>
             </Grid>
             <TextBlock TextWrapping="Wrap" Text="Description:" Foreground="#FF49260E" FontSize="18.667" Margin="0,10,0,0"/>

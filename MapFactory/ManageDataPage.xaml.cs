@@ -11,12 +11,19 @@ using Microsoft.Phone.Tasks;
 using Windows.Storage;
 using System.Threading.Tasks;
 using System.IO;
+using OxyPlot;
+using OxyPlot.Series;
+using System.Globalization;
+using System.Windows.Threading;
 //using Windows.ApplicationModel;
 
 namespace MapFactory
 {
     public partial class ManageDataPage : PhoneApplicationPage
     {
+        public static double[] longitude;
+        public static double[] latitude;
+
         public ManageDataPage()
         {
             InitializeComponent();
@@ -52,6 +59,10 @@ namespace MapFactory
             {
                 this.textBlockStatus.Text = "database is empty";
             }
+
+            // reading data
+            
+
         }
 
         
@@ -122,5 +133,68 @@ namespace MapFactory
 
             this.textBlockStatus.Text = "database is empty";
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
+
+    public class MapModel
+    {
+        public double[] longitude;
+        public double[] latitude;
+
+        public MapModel()
+        {
+
+            ReadData();
+
+            this.MyModel = new PlotModel();
+            var scatterSeries = new ScatterSeries { MarkerType = MarkerType.Circle };
+
+            try
+            {
+                for (int i = 0; i < latitude.Length; i++)
+                {
+                    scatterSeries.Points.Add(new ScatterPoint(longitude[i], latitude[i]));
+                }
+
+                this.MyModel.Series.Add(scatterSeries);
+            }
+            catch
+            {
+                this.MyModel.Series.Add(new FunctionSeries(Math.Cos, 0, 10, 0.1, "cos(x)"));
+            }
+
+        }
+
+        async public void ReadData()
+        {
+            string trackingDataString = "";
+
+            StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+
+            var file = await storageFolder.OpenStreamForReadAsync("tracking.dat");
+
+            using (StreamReader streamReader = new StreamReader(file))
+            {
+                trackingDataString += streamReader.ReadToEnd();
+            }
+
+            string[] trackingDataLinesString = trackingDataString.Trim().Split('\n');
+
+            longitude = new double[trackingDataLinesString.Length];
+            latitude = new double[trackingDataLinesString.Length];
+
+            for (int i = 0; i < trackingDataLinesString.Length; i++)
+            {
+                longitude[i] = Convert.ToDouble(trackingDataLinesString[i].Split()[0], CultureInfo.InvariantCulture);
+                latitude[i] = Convert.ToDouble(trackingDataLinesString[i].Split()[1], CultureInfo.InvariantCulture);
+            }
+        }
+
+        public PlotModel MyModel { get; private set; }
+    }
+
 }

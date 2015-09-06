@@ -15,9 +15,9 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
-    <phone:PhoneApplicationPage.DataContext>
+    <!--<phone:PhoneApplicationPage.DataContext>
         <local:MapModel/>
-    </phone:PhoneApplicationPage.DataContext>
+    </phone:PhoneApplicationPage.DataContext>-->
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">

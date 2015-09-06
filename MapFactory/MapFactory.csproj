@@ -197,7 +197,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="OxyPlot.WP8, Version=2014.1.546.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\OxyPlot.WP8.2014.1.546\lib\windowsphone8\OxyPlot.WP8.dll</HintPath>
+      <HintPath>..\packages\OxyPlot.2014.1.546\lib\windowsphone8\OxyPlot.WP8.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>

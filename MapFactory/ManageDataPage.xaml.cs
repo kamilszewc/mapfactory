@@ -60,9 +60,7 @@ namespace MapFactory
                 this.textBlockStatus.Text = "database is empty";
             }
 
-            // reading data
-            
-
+            GenerateMap();
         }
 
         
@@ -134,42 +132,7 @@ namespace MapFactory
             this.textBlockStatus.Text = "database is empty";
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-    }
-
-    public class MapModel
-    {
-        public double[] longitude;
-        public double[] latitude;
-
-        public MapModel()
-        {
-
-            ReadData();
-
-            this.MyModel = new PlotModel();
-            var scatterSeries = new ScatterSeries { MarkerType = MarkerType.Circle };
-
-            try
-            {
-                for (int i = 0; i < latitude.Length; i++)
-                {
-                    scatterSeries.Points.Add(new ScatterPoint(longitude[i], latitude[i]));
-                }
-
-                this.MyModel.Series.Add(scatterSeries);
-            }
-            catch
-            {
-                this.MyModel.Series.Add(new FunctionSeries(Math.Cos, 0, 10, 0.1, "cos(x)"));
-            }
-
-        }
-
-        async public void ReadData()
+        async private void GenerateMap()
         {
             string trackingDataString = "";
 
@@ -184,17 +147,40 @@ namespace MapFactory
 
             string[] trackingDataLinesString = trackingDataString.Trim().Split('\n');
 
-            longitude = new double[trackingDataLinesString.Length];
-            latitude = new double[trackingDataLinesString.Length];
+            double[] longitude = new double[trackingDataLinesString.Length];
+            double[] latitude = new double[trackingDataLinesString.Length];
 
             for (int i = 0; i < trackingDataLinesString.Length; i++)
             {
-                longitude[i] = Convert.ToDouble(trackingDataLinesString[i].Split()[0], CultureInfo.InvariantCulture);
-                latitude[i] = Convert.ToDouble(trackingDataLinesString[i].Split()[1], CultureInfo.InvariantCulture);
+                longitude[i] = Convert.ToDouble(trackingDataLinesString[i].Split()[0]);
+                latitude[i] = Convert.ToDouble(trackingDataLinesString[i].Split()[1]);
             }
+
+            PlotModel plotModel = new PlotModel();
+
+            var scatterSeries = new ScatterSeries { MarkerType = MarkerType.Circle, MarkerSize = 3, MarkerFill = OxyColor.Parse("#FF573110") };
+
+            //plotModel.Series.Add(new FunctionSeries(Math.Cos, 0, 10, 0.1, longitude[0].ToString())); 
+
+            try
+            {
+                for (int i = 0; i < latitude.Length; i++)
+                {
+                    scatterSeries.Points.Add(new ScatterPoint(longitude[i], latitude[i]));
+                }
+
+                plotModel.Series.Add(scatterSeries);
+            }
+            catch (Exception ex)
+            {
+                plotModel.Series.Add(new FunctionSeries(Math.Cos, 0, 10, 0.1, ex.Message));
+            }
+
+            this.plot.Model = plotModel;
+
         }
 
-        public PlotModel MyModel { get; private set; }
     }
+
 
 }

@@ -32,10 +32,10 @@
             <Button x:Name="buttonSendData" Content="Send data" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,10" Click="buttonSendData_Click" Foreground="#FF573110" BorderBrush="#FF573110" Background="{x:Null}"/>
             <Button x:Name="buttonClearData" Content="Clear data" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,10,5,40" Click="buttonClearData_Click" BorderBrush="#FF573110" Foreground="#FF573110" Background="{x:Null}"/>
 
-            <oxy:PlotView Model="{Binding MyModel}" Height="334" Margin="10" Background="#FFF3CD7E"/>
+            <oxy:PlotView Model="{Binding MyModel}" Height="334" Margin="10" Background="Transparent"/>
 
         
-            <Button Content="Send map" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="450" Margin="0,10,0,0" Click="Button_Click"/>
+            <Button Content="Generate map" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="450" Margin="0,10,0,0" Click="Button_Click"/>
         </StackPanel>
     </Grid>
 
